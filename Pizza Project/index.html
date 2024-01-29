@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pizza Making Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+     <div class="container">
+        <div class="instructions">
+            <h2>Technical Documentation: Pizza Assembly Instructions</h2>
+            
+            <h3><u>Summary Steps</u></h3>
+            <ol>
+                <li>Dough Preparation</li>
+                <li>Topping Selection</li>
+                <li>Oven Temperature Configuration</li>
+                <li>Baking Time Adjustment</li>
+                <li>Baking Initiation</li>
+            </ol>
+
+            <h3><u>Detailed Steps</u></h3>
+            <p><strong>Step 1: Dough Preparation</strong></p>
+            <p><strong>Command or Action:</strong> Select "Roll Dough" to begin.<br>
+            <strong>Purpose:</strong> Commences the dough rolling process to achieve a uniform thickness of 0.25 inches and a diameter suitable for your oven size.<br>
+            <strong>Do:</strong> Aim for even distribution across the entire surface area.<br>
+            <strong>Don't:</strong> Overwork the dough as it may become tough.</p>
+            
+            <p><strong>Step 2: Topping Selection</strong></p>
+            <p><strong>Command or Action:</strong> Click on each topping to add it to your pizza.<br>
+            <strong>Purpose:</strong> Enhances the flavor profile of the pizza. A balanced variety contributes to a well-rounded taste.<br>
+            <strong>Do:</strong> Add a mix of both savory (e.g., cheese, ham) and fresh (e.g., tomatoes, onions) toppings.<br>
+            <strong>Don't:</strong> Overload with too many toppings as it may result in undercooking.</p>
+            
+            <p><strong>Step 3: Oven Temperature Configuration</strong></p>
+<p><strong>Command or Action:</strong> Enter the desired temperature.<br>
+<strong>Purpose:</strong> Sets the optimal environment for baking. The standard baking temperature for pizza is 350°F.<br>
+<strong>Do:</strong> Preheat the oven to the set temperature before baking.<br>
+<strong>Don't:</strong> Exceed the recommended temperature range as it may burn the crust.</p>
+
+<p><strong>Step 4: Baking Time Adjustment</strong></p>
+<p><strong>Command or Action:</strong> Set the baking duration.<br>
+<strong>Purpose:</strong> Determines how long the pizza will bake. The standard time is 30 minutes.<br>
+<strong>Do:</strong> Use a timer to avoid over-baking.<br>
+<strong>Don't:</strong> Leave the pizza unattended while baking.</p>
+
+<p><strong>Step 5: Baking Initiation</strong></p>
+<p><strong>Command or Action:</strong> Press "Bake Pizza" to start the baking process.<br>
+<strong>Purpose:</strong> Begins the actual cooking of the pizza, where all ingredients are cooked, and flavors meld.<br>
+<strong>Do:</strong> Place the pizza on the middle rack for even cooking.<br>
+<strong>Don't:</strong> Open the oven frequently, as it can cause temperature fluctuations.</p>
+
+            <!-- Continue with the rest of the steps similarly -->
+
+            <h3><u>Scoring</u></h3>
+            <p>Your score is calculated based on the precision of your oven settings and the judicious selection of toppings. Scores decrease as the oven temperature and baking time deviate from the perfect settings of 350°F and 30 minutes, respectively.</p>
+
+            <h3><u>Standard Operating Procedure (SOP)</u></h3>
+            <p>Ensure all ingredients are fresh and within use-by dates.
+            Preheat the oven at least 15 minutes before baking.
+            Use a pizza stone or a perforated pan for a crispier crust.
+            Allow the pizza to rest for a few minutes after baking for easier slicing.</p>
+
+<h3><u>Troubleshooting Guide</u></h3>
+<p><strong>Problem:</strong> Pizza bottom is not crispy.<br>
+<strong>Solution:</strong> Check if the oven was adequately preheated and the baking surface is hot enough.</p>
+<p><strong>Problem:</strong> Toppings are undercooked.<br>
+<strong>Solution:</strong> Increase baking time slightly, or place pizza higher in the oven next time.</p>
+<p><strong>Problem:</strong> Cheese is not evenly melted.<br>
+<strong>Solution:</strong> Ensure the cheese is evenly distributed and not piled in the center.</p>
+
+        </div>
+
+        
+
+        
+        
+        <div class="game-controls">
+            <h1>Pizza Making Simulation</h1>
+            <!-- Right side with interactive game controls -->
+            <!-- Dough Rolling Section -->
+            <div class="control-section">
+                <div class="control-block">
+                    <img src="dough.png" alt="Dough" class="topping-img">
+                    <button onclick="rollDough()" class="control-button dough-button">Roll Dough</button>
+                </div>
+            </div>
+
+                       <!-- Toppings Section -->
+ <div class="control-section toppings-section">
+    <div class="control-block">
+        <img src="cheese.png" alt="Cheese" class="topping-img">
+        <button id="btn-Cheese" onclick="toggleTopping('Cheese')" class="control-button">Add Cheese</button>
+    </div>
+    <div class="control-block">
+        <img src="pepperoni.png" alt="Pepperoni" class="topping-img">
+        <button id="btn-Pepperoni" onclick="toggleTopping('Pepperoni')" class="control-button">Add Pepperoni</button>
+    </div>
+    <div class="control-block">
+        <img src="olives.png" alt="Olives" class="topping-img">
+        <button id="btn-Olives" onclick="toggleTopping('Olives')" class="control-button">Add Olives</button>
+    </div>
+    <div class="control-block">
+        <img src="onion.jpeg" alt="Onion" class="topping-img">
+        <button id="btn-Onion" onclick="toggleTopping('Onion')" class="control-button">Add Onion</button>
+    </div>
+    <div class="control-block">
+        <img src="tomato.png" alt="Tomato" class="topping-img">
+        <button id="btn-Tomato" onclick="toggleTopping('Tomato')" class="control-button">Add Tomato</button>
+    </div>
+    <div class="control-block">
+        <img src="ham.png" alt="Ham" class="topping-img">
+        <button id="btn-Ham" onclick="toggleTopping('Ham')" class="control-button">Add Ham</button>
+    </div>
+
+    <!-- Oven Controls Section -->
+<div class="control-section oven-controls">
+    <div>
+        <label for="ovenTemp">Oven Temperature (°F):</label>
+        <input type="number" id="ovenTemp" class="oven-input">
+    </div>
+    <div>
+        <label for="bakingTime">Baking Time (min):</label>
+        <input type="number" id="bakingTime" class="oven-input">
+    </div>
+
+</div>
+
+            <!-- Baking Section -->
+<div class="control-section">
+    <div class="control-block">
+        <img src="bake.jpeg" alt="Bake" class="topping-img">
+        <button onclick="bakePizza()" class="control-button bake-button">Bake Pizza</button>
+        <div class="loading-circles">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+    </div>
+</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
